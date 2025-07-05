@@ -1,0 +1,338 @@
+.product__block {
+  padding-top: 15px;
+}
+.product__title {
+  font-weight: 500;
+  font-size: clamp(24px, 5vw, 48px);
+  color: var(--1);
+  text-align: center;
+}
+
+.product__lists {
+  padding-top: 30px;
+}
+
+.product__lists-title {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--prime);
+}
+
+.products__items {
+  padding: 24px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+  column-gap: 24px;
+  row-gap: 24px;
+}
+
+// product card
+
+.products__card {
+  margin: 0 auto;
+  max-width: 319px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background: var(--color-white);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 16px 24px 16px;
+}
+
+.img-wrap {
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.imgSize {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.card__top,
+.card__status,
+.card__bootom {
+  display: flex;
+  justify-content: space-between;
+}
+
+// product top not chenged in responsive
+.card__top {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.card__stars {
+  display: flex;
+  align-items: center;
+
+  & > span:last-child {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--prime);
+    margin-left: 8px;
+  }
+}
+
+.card__like {
+  display: flex;
+  gap: 8px;
+  transition: all 0.3s ease;
+
+  & > button {
+    cursor: pointer;
+  }
+
+  & > button:hover {
+    transform: scale(1.01);
+  }
+}
+
+// card data first time mobile version flex diractory colums 18px font
+// and desktop versian 992px column-reverse 24px font
+.card__data {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: var(--1);
+}
+
+// card status font size mobile version 14px and desktop version 16px
+
+.card__status {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-wrap: nowrap;
+}
+
+.status-color {
+  display: inline-block;
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #52d116;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+// card cost
+
+.card__cost {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.old-cost {
+  font-size: 16px;
+  text-decoration: line-through;
+  color: var(--05);
+}
+
+.now-cost {
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--1);
+  display: none;
+}
+
+.add-basket {
+  @include buy-gren;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color-white);
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding: 8px;
+
+  & > img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.btn-text {
+  display: none;
+}
+
+.now__cost-btn {
+  font-size: 20px;
+}
+
+// vard bottom
+.card__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cheeper {
+  text-align: start;
+  font-weight: 500;
+  font-size: 14px;
+
+  color: var(--prime);
+  padding: 0;
+  margin: 0;
+}
+
+.one-click {
+  font-weight: 500;
+  text-align: right;
+  color: var(--06);
+  font-size: 14px;
+}
+
+.primary {
+  background-color: var(--prime);
+  &:hover {
+    @include transform;
+  }
+}
+
+.card__disable {
+  display: flex;
+  flex-direction: column;
+
+  & > span {
+    display: block;
+  }
+}
+
+.card__status-disable {
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card__status-text {
+  font-weight: 500;
+  color: var(--06);
+}
+
+.card__description {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--05);
+  padding: 0 10px;
+}
+
+.status__color-primary {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--prime);
+  margin-right: 10px;
+  display: block;
+}
+
+.card__btn-disable {
+  flex-grow: 1;
+  border: 2px solid var(--prime);
+  padding: 17px 0;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 16px;
+  color: var(--prime);
+}
+
+.card__disable {
+  width: fit-content;
+  overflow: hidden;
+}
+.wishAc svg {
+  fill: #52d116;
+  stroke: #52d116;
+  color: #52d116;
+}
+
+.heartAc {
+  fill: red;
+}
+
+@media (min-width: 992px) {
+  .card__data {
+    flex-direction: column-reverse;
+  }
+
+  .card__name {
+    font-size: 24px;
+    margin-bottom: 9px;
+  }
+
+  .status,
+  .card__period {
+    font-size: 16px;
+  }
+
+  .status-color {
+    width: 16px;
+    height: 16px;
+  }
+
+  .old-cost {
+    font-size: 20px;
+    flex-grow: 1;
+  }
+
+  .now-cost {
+    display: flex;
+    font-size: 32px;
+    flex-grow: 1;
+  }
+
+  .add-basket {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+  }
+  .now__cost-btn {
+    display: none;
+  }
+  .btn-text {
+    display: block;
+  }
+
+  .basket-status {
+    width: fit-content;
+  }
+
+  .cheeper,
+  .one-click {
+    font-size: 16px;
+  }
+}
