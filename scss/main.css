@@ -1,28 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-/* 400 - Regular */
-@font-face {
-  font-family: "Pro Display";
-  src: url("../../fonts/SFPRODISPLAYREGULAR.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-/* 500 - Medium */
-@font-face {
-  font-family: "Pro Display";
-  src: url("../../fonts/SFPRODISPLAYMEDIUM.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-/* 700 - Bold */
-@font-face {
-  font-family: "Pro Display";
-  src: url("../../fonts/SFPRODISPLAYBOLD.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
 :root {
-  --font-family: "Pro Display";
-  --secont-family: "Inter, sans-serif";
+  --font-family: "sans-serif";
+  --secont-family: "sans-serif";
   --1: #100e0e;
   --prime: #0071e4;
   --03: #b7b7b7;
@@ -86,6 +64,13 @@ input {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.wishAc {
+  fill: none;
+}
+.wishAc.active path {
+  fill: red;
 }
 
 h1 {
@@ -822,6 +807,7 @@ h1 {
   font-size: 16px;
   text-decoration: line-through;
   color: var(--05);
+  margin-left: 10px;
 }
 
 .now-cost {
@@ -843,7 +829,7 @@ h1 {
   color: var(--color-white);
   margin-top: 8px;
   margin-bottom: 12px;
-  padding: 8px;
+  padding: 10px;
 }
 .add-basket > img {
   width: 24px;
@@ -859,7 +845,7 @@ h1 {
 }
 
 .card__bottom {
-  width: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -940,16 +926,6 @@ h1 {
   overflow: hidden;
 }
 
-.wishAc svg {
-  fill: #52d116;
-  stroke: #52d116;
-  color: #52d116;
-}
-
-.heartAc {
-  fill: red;
-}
-
 @media (min-width: 992px) {
   .card__data {
     flex-direction: column-reverse;
@@ -997,6 +973,13 @@ h1 {
     font-size: 16px;
   }
 }
+.wishAc path {
+  fill: none;
+}
+.wishAc.active path {
+  fill: red;
+}
+
 .details__block {
   display: flex;
   flex-direction: column;

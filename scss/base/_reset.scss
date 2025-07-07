@@ -47,3 +47,11 @@ input {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.wishAc {
+  fill: none;
+
+  &.active path {
+    fill: red;
+  }
+}

@@ -1,6 +1,7 @@
 .product__block {
   padding-top: 15px;
 }
+
 .product__title {
   font-weight: 500;
   font-size: clamp(24px, 5vw, 48px);
@@ -154,6 +155,7 @@
   font-size: 16px;
   text-decoration: line-through;
   color: var(--05);
+  margin-left: 10px;
 }
 
 .now-cost {
@@ -174,8 +176,7 @@
   color: var(--color-white);
   margin-top: 8px;
   margin-bottom: 12px;
-  padding: 8px;
-
+  padding: 10px;
   & > img {
     width: 24px;
     height: 24px;
@@ -192,7 +193,7 @@
 
 // vard bottom
 .card__bottom {
-  width: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -201,7 +202,6 @@
   text-align: start;
   font-weight: 500;
   font-size: 14px;
-
   color: var(--prime);
   padding: 0;
   margin: 0;
@@ -216,6 +216,7 @@
 
 .primary {
   background-color: var(--prime);
+
   &:hover {
     @include transform;
   }
@@ -272,15 +273,6 @@
   width: fit-content;
   overflow: hidden;
 }
-.wishAc svg {
-  fill: #52d116;
-  stroke: #52d116;
-  color: #52d116;
-}
-
-.heartAc {
-  fill: red;
-}
 
 @media (min-width: 992px) {
   .card__data {
@@ -320,9 +312,11 @@
     justify-content: center;
     padding: 16px 0;
   }
+
   .now__cost-btn {
     display: none;
   }
+
   .btn-text {
     display: block;
   }
@@ -334,5 +328,15 @@
   .cheeper,
   .one-click {
     font-size: 16px;
+  }
+}
+
+.wishAc {
+  path {
+    fill: none;
+  }
+
+  &.active path {
+    fill: red;
   }
 }
